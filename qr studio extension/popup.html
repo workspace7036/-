@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QR Studio</title><link rel="stylesheet" href="popup.css"></head><body>
+<svg class="sp" width="0" height="0" aria-hidden="true"><defs>
+<symbol id="f-ru" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><rect width="60" height="10" fill="#fff"/><rect y="10" width="60" height="10" fill="#0039a6"/><rect y="20" width="60" height="10" fill="#d52b1e"/></symbol>
+<symbol id="f-pl" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><rect width="60" height="15" fill="#fff"/><rect y="15" width="60" height="15" fill="#dc143c"/></symbol>
+<symbol id="f-uk" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><rect width="60" height="15" fill="#0057b7"/><rect y="15" width="60" height="15" fill="#ffd700"/></symbol>
+<symbol id="f-en" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><clipPath id="c1"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="c2"><path d="M30 15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><g clip-path="url(#c1)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#c2)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></symbol>
+</defs></svg>
+<div class="app">
+<header><b>QR Studio</b>
+<button class="ib" id="rd" data-ti="Случайный стиль"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1" fill="currentColor"/></svg></button>
+<button class="ib" id="rs" data-ti="Сбросить настройки"><svg class="ic" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+<button class="ib" id="th" data-ti="Светлая / тёмная тема"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button>
+<button class="ib" id="xp" data-ti="Открыть в большом окне"><svg class="ic" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button>
+<div class="lw"><button class="lb" id="lb" data-ti="Язык" aria-haspopup="listbox" aria-expanded="false"><svg class="fg"><use id="lbf" href="#f-ru"/></svg><span id="lbc">RU</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><ul id="lm" role="listbox"></ul></div>
+</header>
+<div class="top"><div id="stage"><div id="prev"></div></div>
+<div class="act">
+<div class="seg" id="seg"><i id="thumb"></i><button data-f="png" class="on">PNG</button><button data-f="jpg">JPG</button><button data-f="webp">WEBP</button><button data-f="svg">SVG</button></div>
+<label class="row"><span data-i="Размер, px"></span><input type="number" id="sz" min="128" max="4096" value="1024"></label>
+<button class="pr" id="dl"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg><span data-i="Скачать"></span></button>
+<button id="cp" class="ib2"><svg class="ic" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg><span data-i="Копировать картинку"></span></button>
+<button id="ck" class="ib2"><svg class="ic" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M8 12l3 3 5-6"/></svg><span data-i="Проверить сканирование"></span></button>
+<div id="st"></div></div></div>
+<nav id="nav"></nav><div id="pn"></div></div><div id="toast"></div>
+<script src="qr-lib.js"></script><script src="popup.js"></script></body></html>
