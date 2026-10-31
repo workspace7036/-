@@ -1,8 +1,0 @@
-{
- "extName": {
-  "message": "QR Studio"
- },
- "extDesc": {
-  "message": "Minimal QR code generator: custom shapes, frames, dotted logo, PNG and SVG export. Works offline."
- }
-}
